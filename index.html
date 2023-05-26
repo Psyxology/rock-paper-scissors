@@ -5,51 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>rock paper scissors</title>
+    <script src="myjs.js" defer></script>
 </head>
 <body>
-    <script>
-
-        let userChoice;
-        do { userChoice = prompt("pick: rock, paper, or scissors").toLowerCase();
-    } 
-    while (userChoice != "rock" && userChoice != "paper" && userChoice != "scissors");
     
-        
-        function getComputerChoice (choiceList) {
-            const randomIndex = Math.floor(Math.random() * choiceList.length);
-            const randomChoice = choiceList[randomIndex];
-            return randomChoice;
-        }
-        
-       const choiceList = ["rock", "paper", "scissors"];
-       let computerChoice;
-    
-        
-        
-        function playRound (userChoice, computerChoice) {
-            computerChoice = getComputerChoice(choiceList);
-            if (userChoice == computerChoice)
-                console.log("You chose " + userChoice + ", computer chose " + computerChoice + ", result is a tie");
-            else if (userChoice == "rock" && computerChoice == "scissors" || userChoice == "paper" && computerChoice == "rock" || userChoice == "scissors" && computerChoice == "paper")
-                console.log("You chose " + userChoice + ", computer chose " + computerChoice + ", you win");
-                else
-                console.log("You chose " + userChoice + ", computer chose " + computerChoice + ", you lose");
-            
-        }
-
-        function playGame() {
-            console.log(playRound (userChoice, computerChoice));
-            console.log(playRound (userChoice, computerChoice));
-            console.log(playRound (userChoice, computerChoice));
-            console.log(playRound (userChoice, computerChoice));
-            console.log(playRound (userChoice, computerChoice));
-        }
-        
-        playGame();
-       
-    
-
-
-    </script>
+    <button id='rBtn'>Rock</button>
+    <button id='pBtn'>Paper</button>
+    <button id='sBtn'>Scissors</button>
+    <p>wins</p>
+ 
+    <div id='win'>
+ 
+    </div>
+ 
+    <p>losses</p>
+ 
+    <div id='loss'>
+ 
+    </div>
+ 
+    <p>ties</p>
+ 
+    <div id='tie'>
+ 
+    </div>
+ 
+ <div id = 'message'>
+ 
+ </div>
+ 
 </body>
 </html>
